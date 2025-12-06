@@ -11,17 +11,17 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Container fluid className="home-section p-5" id="home">
         {/* <Particle /> */}
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+              <h1 style={{ paddingBottom: 15 }} className="heading hithere">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
@@ -33,17 +33,17 @@ function Home() {
                 <strong className="main-name"> Mahedi Hasan</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div className="typingtext" style={{ padding: 50, textAlign: "start " }}>
                 <Type />
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
+            <Col md={5} >
               <img
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{ maxHeight: "550px" }}
               />
             </Col>
           </Row>
@@ -59,6 +59,17 @@ function Home() {
               Feel free to <span className="purple">connect </span>with me
             </p>
             <ul className="home-about-social-links">
+               <li className="social-icons">
+                                                  <a
+                                                    href="https://web.facebook.com/mahdihasan.sun"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="icon-colour  home-social-icons"
+                                                  >
+                                                    <FaFacebook />
+                                                  </a>
+                                                </li>
+
               <li className="social-icons">
                 <a
                   href="https://github.com/mahedi0x"
@@ -89,16 +100,7 @@ function Home() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/mahedi0x"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
+             
             </ul>
           </Col>
         </Row>

@@ -8,9 +8,9 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
+        <Row style={{ marginBottom: "10px" }} > 
+          <Col md={8} className="home-about-description mb-5 pb-5">
+            <h1 style={{ fontSize: "2.6em", textAlign: "start" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
@@ -22,13 +22,13 @@ function Home2() {
               <b className="purple"> Node.js</b>,and
               <b className="purple"> MongoDB.</b>
               <br />
-              <br />
-              I thrive on learning new technologies, sharpening my
+              
+              {/* I thrive on learning new technologies, sharpening my
               problem-solving mindset, and pushing my boundaries through
               continuous growth. From crafting smooth, intuitive user interfaces
               to engineering secure and efficient backend systems, I enjoy
-              working across the entire full-stack development lifecycle.
-              <br />
+              working across the entire full-stack development lifecycle. */}
+             
               <br />I continually upgrade my skills by exploring modern{" "}
               <b className="purple">frameworks</b>, improving{" "}
               <b className="purple">UI/UX </b> design optimizing frontend

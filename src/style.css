@@ -265,25 +265,47 @@ button:focus {
   /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  padding: 10px;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
+  padding: 6rem 0 0 !important;
   color: whitesmoke;
   text-align: left;
 }
 
-.heading {
-  font-size: 2.4em !important;
-  padding-left: 50px !important;
-}
+
+
 
 .heading-name {
-  font-size: 2.5em !important;
-  padding-left: 45px !important;
+  font-size: 3.2em;
+  padding-left: 45px;
 }
+
+.heading {
+  font-size: 2.8em;
+  padding-left: 45px;
+}
+
+/* ✅ Mobile Only */
+@media only screen and (max-width: 576px) {
+  .heading-name {
+    font-size: 2.5rem;
+    padding-left: 0px;
+  }
+
+  .heading {
+    font-size: 2.4em;
+    padding-left: 0px;
+  }
+  .typingtext{
+    padding: 0;
+    margin-left: -50px;
+  }
+}
+
 
 .main-name {
   color: #cd5ff8;
