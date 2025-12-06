@@ -256,7 +256,13 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  padding-top: 100px !important;
+}
+.logoname{
+  font-weight: 800;
+  font-weight: bolder;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+ 
 }
 
 .home-section {
@@ -304,6 +310,10 @@ button:focus {
     padding: 0;
     margin-left: -50px;
   }
+  .home-about-section {
+    position: relative;
+    padding-top: -70px !important;
+  }
 }
 
 
@@ -346,9 +356,10 @@ button:focus {
 
 .home-about-section {
   position: relative;
-  padding-bottom: 70px !important;
-  padding-top: 70px !important;
+  /* padding-bottom: 70px !important; */
+  /* padding-top: 70px !important; */
 }
+
 
 .home-about-description {
   color: white !important;
