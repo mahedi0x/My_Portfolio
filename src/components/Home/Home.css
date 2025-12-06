@@ -1,0 +1,76 @@
+.approach-section {
+    margin-top: 80px;
+  }
+  
+  .approach-card {
+    position: relative;
+    padding: 30px;
+    height: 100%;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .approach-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .approach-card h4 {
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  
+  .approach-card p {
+    opacity: 0.85;
+    font-size: 18px;
+  }
+  
+  /* Step Number */
+  .step-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    opacity: 0.15;
+  }
+  
+  /* ✨ Animated Border Effect */
+  .animated-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(
+      130deg,
+      transparent,
+      #8b5cf6,
+      #22d3ee,
+      transparent
+    );
+    animation: borderMove 6s linear infinite;
+    -webkit-mask: 
+      linear-gradient(#000 0 0) content-box, 
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  
+  @keyframes borderMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 300% 50%;
+    }
+  }
+  
+  /* Highlight the middle card like the screenshot */
+  .active-card {
+    box-shadow: 0 0 30px rgba(29, 15, 107, 0.4);
+  }
+  
