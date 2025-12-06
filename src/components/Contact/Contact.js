@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook } from "react-icons/
 import {
     AiFillGithub,
     AiOutlineTwitter,
-    AiFillInstagram,
+
   } from "react-icons/ai";
   import { FaLinkedinIn } from "react-icons/fa";
 

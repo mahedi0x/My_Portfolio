@@ -19,12 +19,37 @@ function Projects() {
             backdrop-filter: blur(15px);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
             border-radius: 15px !important;
-            height: 100% !important;
+            
+            /* Enable Flexbox for vertical layout control */
+            display: flex; 
+            flex-direction: column;
+            
+            /* Crucial for equal height across all cards */
+            height: 100% !important; 
+            
             padding: 20px !important;
-            text-align: center;
+            /* REMOVED text-align: center; from here as it messes with the description */
             opacity: 1;
             transition: all 0.4s ease-in-out !important;
           }
+
+          /* Fix for Word Spacing and Text Alignment */
+          .project-card-view p {
+              text-align: left !important; /* Ensure text flows naturally */
+              flex-grow: 1; /* Allow description to take up maximum space */
+              margin-bottom: 20px; /* Add margin below description */
+          }
+          
+          /* New CSS for Button Alignment and Grouping */
+          .project-card-view .project-card-footer {
+              margin-top: auto; /* Pushes the button group to the bottom of the card */
+              text-align: center !important; /* Center the buttons horizontally */
+              display: flex;
+              justify-content: center; /* Center buttons within the footer */
+              gap: 10px; /* Space between buttons */
+              padding-top: 10px; /* Small space above the buttons */
+          }
+
 
           /* Hover Animation: Lift Up + Purple Glow */
           .project-card-view:hover {
@@ -49,7 +74,9 @@ function Projects() {
             border-color: #623686 !important;
             transition: all 0.3s ease;
           }
-
+          
+          /* Removed margin-top: auto from here, as it's now applied to the footer wrapper */
+          
           .project-card-view .btn-primary:hover {
             background-color: #8a4baf !important;
             transform: translateY(-2px);
@@ -63,6 +90,7 @@ function Projects() {
 
           .project-card {
             animation: fadeIn 0.8s ease-out forwards;
+            height: 100%; /* Ensure Col takes 100% height for d-flex Row */
           }
         `}
       </style>
@@ -76,7 +104,8 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        {/* Added d-flex align-items-stretch for equal height cards */}
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }} className="d-flex align-items-stretch">
           
           {/* Card 1: CleanBD */}
           <Col md={4} className="project-card">
@@ -96,7 +125,7 @@ function Projects() {
               imgPath={learnSkill}
               isBlog={false}
               title="LearnSkill"
-              description="LearnSkill is a full-stack course management platform built with Next.js and NextAuth.js. Users can browse course details, add, manage, update, and delete courses. The app features secure authentication, protected pages, and a responsive, interactive UI with reusable components."
+              description="LearnSkill is a full-stack course management platform built with Next.js and NextAuth.js. It allows users to explore detailed course information and efficiently add, manage, update, or delete courses as needed. The application includes secure authentication, protected routes for sensitive actions, and a fully responsive, interactive user interface designed with reusable and maintainable components."
               ghLink="https://github.com/mahedi0x/Course_Management_Client"
               demoLink="https://course-management-client-lac.vercel.app/"              
             />
@@ -108,7 +137,7 @@ function Projects() {
               imgPath={greenNest}
               isBlog={false}
               title="GreenNest"
-              description="GreenNest is a single-page web app for indoor plant lovers to explore plants, access care guides, buy products, and book expert consultations. Built with React.js, Material-UI, and Firebase, it features secure authentication, protected routes, and a responsive, user-friendly design."
+              description="GreenNest is a modern single-page web application designed for indoor plant enthusiasts to explore a wide variety of plants, access detailed care guides, purchase plant-related products, and book expert consultations. Built using React.js, Material-UI, and Firebase, the platform provides secure authentication, protected routes, and a fully responsive, user-friendly interface that ensures a smooth and engaging experience across all devices."
               ghLink="https://github.com/mahedi0x/GreenNest_Project"
               demoLink="https://green-nest-plant-677ac.web.app/"
             />
